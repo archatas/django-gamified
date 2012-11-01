@@ -13,7 +13,7 @@ class BadgeAchievement(models.Model):
     class Meta:
         verbose_name = _("Badge Achievement")
         verbose_name_plural = _("Badge Achievements")
-        db_name = "gamified_badgeachievement"
+        db_table = "gamified_badgeachievement"
         
     def __unicode__(self):
         return _("%(slug)s for %(username)s") % {
