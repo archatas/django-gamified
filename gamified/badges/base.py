@@ -6,17 +6,17 @@ class Badge(object):
     description = ""
     allow_multiple = False
     
-    def should_award(self, user, **kwargs):
+    def should_award(self, user, *args, **kwargs):
         return False
         
-    def check_achievement(self, user, **kwargs):
+    def check_achievement(self, user, *args, **kwargs):
         from gamified.badges.models import BadgeAchievement
-        if should_award(user, **kwargs):
+        if self.should_award(user, *args, **kwargs):
             if not BadgeAchievement.objects.filter(
                 user=user,
-                slug=self.slug,
+                badge=self.slug,
                 ).count() or self.allow_multiple:
                 achievement = BadgeAchievement.objects.create(
                     user=user,
-                    slug=self.slug,
+                    badge=self.slug,
                     )
