@@ -25,3 +25,7 @@ class BadgeAchievement(models.Model):
             'badge': self.get_badge_display(),
             'username': self.user.username,
             }
+            
+    def get_badge(self):
+        from registry import badge_registry
+        return badge_registry[self.badge]

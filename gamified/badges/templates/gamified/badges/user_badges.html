@@ -1,0 +1,12 @@
+{% load badges_tags %}
+{% if achievements %}
+    <ul class="badges user-badges">
+    {% for achievement in achievements %}
+        {% with achievement.badge|get_badge as badge %}
+            <li>
+                <span class="badge badge-{{ badge.slug }}">{{ badge.title }}</span> × {{ achievement.badge__count }}
+            </li>
+        {% endwith %}
+    {% endfor %}
+    </ul>
+{% endif %}
