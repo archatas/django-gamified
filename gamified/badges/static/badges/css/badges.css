@@ -1,1 +1,48 @@
+/* AVAILABLE BADGES */
 
+.available-badges td {
+    vertical-align: top;
+    padding-bottom: 1.2em;
+}
+.available-badges tr:last-child td {
+    padding-bottom: 0;
+}
+
+.available-badges .description-cell {
+    padding-left: 1.2em;
+}
+
+
+/* USER BADGES */
+
+.user-badges li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 1.2em;
+}
+
+
+/* GENERAL BADGE */
+
+.badge {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);;
+    border-radius: 1em;
+    padding: .3em 1em .3em 45px;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.badge .icon {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/badge-default.png) no-repeat center center;
+    top: 3px;
+    left: 10px;
+}
+
+.badge-vip .icon {
+    background-image: url(../img/badge-vip.png);
+}

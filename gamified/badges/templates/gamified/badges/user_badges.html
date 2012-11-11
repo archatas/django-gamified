@@ -4,7 +4,7 @@
     {% for achievement in achievements %}
         {% with achievement.badge|get_badge as badge %}
             <li>
-                <span class="badge badge-{{ badge.slug }}">{{ badge.title }}</span> × {{ achievement.badge__count }}
+                <span class="badge badge-{{ badge.slug }}"><span class="icon"></span>{{ badge.title }}</span>{% if achievement.badge__count > 1 %} × {{ achievement.badge__count }}{% endif %}
             </li>
         {% endwith %}
     {% endfor %}

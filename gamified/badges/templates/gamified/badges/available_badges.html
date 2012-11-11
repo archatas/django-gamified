@@ -1,10 +1,16 @@
 {% if badges %}
-    <ul class="badges available-badges">
+    <table class="badges available-badges">
+    <tbody>
     {% for badge in badges %}
-        <li>
-            <span class="badge badge-{{ badge.slug }}">{{ badge.title }}</span>
-            <span class="description">{{ badge.description }}</span>
-        </li>
+        <tr>
+            <td class="badge-cell">
+                <span class="badge badge-{{ badge.slug }}"><span class="icon"></span>{{ badge.title }}</span>
+            </td>
+            <td class="description-cell">
+                <span class="description">{{ badge.description }}</span>
+            </td>
+        </tr>
     {% endfor %}
-    </ul>
+    </tbody>
+    </table>
 {% endif %}
