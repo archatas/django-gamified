@@ -37,3 +37,9 @@ class KarmaChange(models.Model):
             'delta': self.delta,
             }
 
+    def save(self, *args, **kwargs):
+        is_new = not self.pk
+        super(KarmaChange, self).save(*args, **kwargs)
+        if is_new:
+            self.karma.points += self.delta
+            self.karma.save()
