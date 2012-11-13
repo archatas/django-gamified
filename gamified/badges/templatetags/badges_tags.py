@@ -16,13 +16,13 @@ def get_badge(slug):
 
 # TAGS
 
-@register.inclusion_tag("gamified/badges/available_badges.html", takes_context=True)
+@register.inclusion_tag("gamified/badges/includes/available_badges.html", takes_context=True)
 def available_badges(context):
     return {
         'badges': badge_registry.values()
         }
 
-@register.inclusion_tag("gamified/badges/user_badges.html", takes_context=True)
+@register.inclusion_tag("gamified/badges/includes/user_badges.html", takes_context=True)
 def user_badges(context, user):
     return {
         'achievements': BadgeAchievement.objects.filter(

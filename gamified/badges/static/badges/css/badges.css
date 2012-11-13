@@ -4,20 +4,44 @@
     vertical-align: top;
     padding-bottom: 1.2em;
 }
+.available-badges tr:first-child td {
+    padding-top: .5em;
+}
 .available-badges tr:last-child td {
-    padding-bottom: 0;
+    padding-bottom: .5em;
 }
 
 .available-badges .description-cell {
     padding-left: 1.2em;
 }
 
+.badge-count {
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+.badge-list {
+    margin-top: 1em;
+}
+
+.badge-list .badge {
+    opacity: .5;
+}
+.badge-list .badge-achieved {
+    opacity: 1;
+}
 
 /* USER BADGES */
+
+.user-badges {
+    margin: 1em 0 1em 0;
+}
 
 .user-badges li {
     list-style-type: none;
     display: inline-block;
+    margin-top: .6em;
+    margin-bottom: .6em;
     margin-right: 1.2em;
 }
 
@@ -31,6 +55,7 @@
     padding: .3em 1em .3em 45px;
     position: relative;
     font-size: 1.2em;
+    white-space: nowrap;
 }
 
 .badge .icon {
