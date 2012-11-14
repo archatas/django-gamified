@@ -1,0 +1,9 @@
+{% if karma_changes %}
+    <ul class="karma-changes">
+    {% for karma_change in karma_changes %}
+        <li>
+            <span class="karma-delta">{{ karma_change.delta }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
