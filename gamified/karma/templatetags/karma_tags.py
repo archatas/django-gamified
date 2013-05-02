@@ -13,7 +13,7 @@ register = template.Library()
 def get_karma_points(user):
     try:
         karma = Karma.objects.get(user=user)
-    except Karma.DoesNotExists:
+    except Karma.DoesNotExist:
         karma = Karma()
     return karma.points
 
